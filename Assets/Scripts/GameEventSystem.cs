@@ -15,6 +15,7 @@ public class GameEventSystem : MonoBehaviour
 
     // Creating C# Event
     public event Action OnDoorwayTriggerEnter;
+    public event Action OnDoorwayTriggerExit;
 
 
     public void DoorwayTriggerEnterMethod()
@@ -22,6 +23,15 @@ public class GameEventSystem : MonoBehaviour
         if (OnDoorwayTriggerEnter != null)
         {
             OnDoorwayTriggerEnter();
+        }
+    }
+
+
+    public void DoorwayTriggerExitMethod()
+    {
+        if (OnDoorwayTriggerExit != null)
+        {
+            OnDoorwayTriggerExit();
         }
     }
 }
