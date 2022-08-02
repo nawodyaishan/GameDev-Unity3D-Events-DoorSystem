@@ -13,6 +13,6 @@ public class DoorController : MonoBehaviour
     // Opening The Door
     void OnDoorWayOpen()
     {
-        LeanTween.
+        LeanTween.moveLocalY(gameObject, 1.6f, 1f).setEaseOutQuad();
     }
 }
