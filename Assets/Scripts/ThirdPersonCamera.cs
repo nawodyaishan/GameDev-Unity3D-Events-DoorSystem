@@ -6,8 +6,10 @@ public class ThirdPersonCamera : MonoBehaviour
     private Transform orientation;
 
     [SerializeField] private Transform player;
+
     [SerializeField] private Transform playerObj;
-    [SerializeField] private Rigidbody rigidbody;
+
+    // [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private float rotationSpeed;
 
     private void Start()

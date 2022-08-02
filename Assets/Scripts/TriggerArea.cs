@@ -4,13 +4,19 @@ public class TriggerArea : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collider Entered");
-        GameEventSystem.CurrentInstance.DoorwayTriggerEnterMethod();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Collider Entered");
+            GameEventSystem.CurrentInstance.DoorwayTriggerEnterMethod();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Collider Exited");
-        GameEventSystem.CurrentInstance.DoorwayTriggerExitMethod();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Collider Exited");
+            GameEventSystem.CurrentInstance.DoorwayTriggerExitMethod();
+        }
     }
 }
