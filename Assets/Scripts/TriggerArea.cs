@@ -12,6 +12,6 @@ public class TriggerArea : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        GameEventSystem.CurrentInstance.DoorwayTriggerEnterMethod();
+        GameEventSystem.CurrentInstance.DoorwayTriggerExitMethod();
     }
 }

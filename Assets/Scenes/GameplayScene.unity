@@ -145,6 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86632057}
   - component: {fileID: 86632058}
+  - component: {fileID: 86632059}
   m_Layer: 0
   m_Name: Trigger Area
   m_TagString: Untagged
@@ -180,6 +181,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.779101, y: 1, z: 11.607332}
   m_Center: {x: -0.18573436, y: 0, z: -0.43401667}
+--- !u!114 &86632059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86632056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c2fb7d084584a53a2d0b6b3a9fc2ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &265597555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2468,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759366361}
-  m_LocalRotation: {x: 0.1387012, y: 0.000000019051377, z: -0.0000000026682394, w: 0.99033433}
+  m_LocalRotation: {x: 0.1387012, y: -0.000000019051376, z: 0.0000000026682392, w: 0.99033433}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
