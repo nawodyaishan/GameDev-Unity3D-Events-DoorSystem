@@ -5,8 +5,8 @@ public class DoorController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameEventSystem.CurrentInstance.OnDoorwayTriggerEnter += OnDoorWayOpen;
-        GameEventSystem.CurrentInstance.OnDoorwayTriggerExit += OnDoorWayClose;
+        GameEventSystem.CurrentInstance.onDoorwayTriggerEnter += OnDoorWayOpen;
+        GameEventSystem.CurrentInstance.onDoorwayTriggerExit += OnDoorWayClose;
     }
 
     // Opening The Door
