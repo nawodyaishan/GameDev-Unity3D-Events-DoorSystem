@@ -22,6 +22,7 @@ public class GameEventSystem : MonoBehaviour
     {
         if (OnDoorwayTriggerEnter != null)
         {
+            Debug.Log("Opening Door");
             OnDoorwayTriggerEnter();
         }
     }
@@ -31,6 +32,7 @@ public class GameEventSystem : MonoBehaviour
     {
         if (OnDoorwayTriggerExit != null)
         {
+            Debug.Log("Closing Door");
             OnDoorwayTriggerExit();
         }
     }
