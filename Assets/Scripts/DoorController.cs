@@ -28,4 +28,10 @@ public class DoorController : MonoBehaviour
             LeanTween.moveLocalY(gameObject, 0.75f, 1f).setEaseInQuad();
         }
     }
+
+    private void OnDestroy()
+    {
+        GameEventSystem.CurrentInstance.OnDoorwayTriggerEnter -= OnDoorWayOpen;
+        GameEventSystem.CurrentInstance.OnDoorwayTriggerExit -= OnDoorWayClose;
+    }
 }

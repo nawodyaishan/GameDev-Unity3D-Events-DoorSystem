@@ -36,4 +36,6 @@ public class GameEventSystem : MonoBehaviour
             OnDoorwayTriggerExit(id);
         }
     }
+
+    
 }
