@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
+    public int id;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -10,14 +12,20 @@ public class DoorController : MonoBehaviour
     }
 
     // Opening The Door
-    void OnDoorWayOpen()
+    void OnDoorWayOpen(int id)
     {
-        LeanTween.moveLocalY(gameObject, 1.6f, 1f).setEaseOutQuad();
+        if (id == this.id)
+        {
+            LeanTween.moveLocalY(gameObject, 1.6f, 1f).setEaseOutQuad();
+        }
     }
 
     // Closing The Door
-    void OnDoorWayClose()
+    void OnDoorWayClose(int id)
     {
-        LeanTween.moveLocalY(gameObject, 0.75f, 1f).setEaseInQuad();
+        if (this.id == id)
+        {
+            LeanTween.moveLocalY(gameObject, 0.75f, 1f).setEaseInQuad();
+        }
     }
 }

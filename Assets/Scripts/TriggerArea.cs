@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
+    public int id;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Collider Entered");
-            GameEventSystem.CurrentInstance.DoorwayTriggerEnterMethod();
+            GameEventSystem.CurrentInstance.DoorwayTriggerEnterMethod(id);
         }
     }
 
@@ -16,7 +18,7 @@ public class TriggerArea : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Collider Exited");
-            GameEventSystem.CurrentInstance.DoorwayTriggerExitMethod();
+            GameEventSystem.CurrentInstance.DoorwayTriggerExitMethod(id);
         }
     }
 }
